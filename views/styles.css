@@ -1,0 +1,11 @@
+.long-bar {
+    background-color: #333;
+    height: 10px;
+    width: 100%;
+    display: flex;
+  }
+  
+  .part {
+    flex: 1;
+    background-color: #fff;
+  }

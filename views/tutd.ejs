@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tutd</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* center the buttons on the page */
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+    /* make the buttons look nice */
+    .button {
+      padding: 8px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="buttons">
+    <% buttons.forEach(function(button) { %>
+      <a href="<%= button.url %>" class="button"><%= button.name %></a>
+    <% }); %>
+  </div>
+</body>
+</html>
