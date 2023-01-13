@@ -1,18 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
 const app = express();
-const os = require('os');
-let ip = "";
-
-const interfaces = os.networkInterfaces();
-Object.keys(interfaces).forEach(function (interfaceName) {
-  interfaces[interfaceName].forEach(function (interface) {
-    if (interface.family === 'IPv4' && !interface.internal) {
-      ip = interface.address;
-    }
-  });
-});
-
 
 app.set('view engine', 'ejs'); // set the view engine to ejs
 app.use(express.static('views')); // serve the views directory as static files
@@ -28,6 +16,14 @@ app.get('/tutd', (req, res) => {
     { name: 'downthumb', url: '/downthumb' },
     { name: 'removethumb', url: '/removethumb' }
   ]});
+});
+
+app.get('/users', (req, res) => {
+  res.render('users.ejs');
+});
+
+app.get('/login', (req, res) => {
+  res.render('login.ejs');
 });
 
 app.listen(8000, () => {

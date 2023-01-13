@@ -1,3 +1,58 @@
+body {
+  background-color: #ccc;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-buttons {
+      align-items: center;
+}
+
+.right-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-buttons a {
+  padding: 8px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* center the buttons on the page */
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  padding: 8px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 5px;
+}
+
 .long-bar {
     background-color: #333;
     height: 10px;
@@ -10,9 +65,38 @@
     background-color: #fff;
   }
 
-  .ip-address {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 0.8em;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  input[type="text"], input[type="password"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
