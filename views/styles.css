@@ -9,3 +9,10 @@
     flex: 1;
     background-color: #fff;
   }
+
+  .ip-address {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.8em;
+  }
+  
