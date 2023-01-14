@@ -2,6 +2,8 @@ const express = require('express');
 const ejs = require('ejs');
 const app = express();
 
+let visitors = [];
+
 app.set('view engine', 'ejs'); // set the view engine to ejs
 app.use(express.static('views')); // serve the views directory as static files
 
@@ -19,11 +21,8 @@ app.get('/tutd', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-  res.render('users.ejs');
-});
-
-app.get('/login', (req, res) => {
-  res.render('login.ejs');
+  visitors.push(req.connection.remoteAddress);
+  res.render('users.ejs', { visitors: visitors });
 });
 
 app.listen(8000, () => {
