@@ -1,18 +1,13 @@
+/* Body Styles */
 body {
   background-color: #ccc;
 }
 
+/* Header Styles */
 header {
   background-color: #333;
   color: #fff;
   padding: 10px;
-}
-
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
 }
 
 .header-buttons {
@@ -21,7 +16,7 @@ footer {
 }
 
 .left-buttons {
-      align-items: center;
+  align-items: center;
 }
 
 .right-buttons {
@@ -39,6 +34,18 @@ footer {
   border-radius: 5px;
 }
 
+/* Footer Styles */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Home Styles */
+/* ... */
+
+/* Tutd Styles */
 /* center the buttons on the page */
 .buttons {
   display: flex;
@@ -53,65 +60,64 @@ footer {
   border-radius: 5px;
 }
 
-.long-bar {
-    background-color: #333;
-    height: 10px;
-    width: 100%;
-    display: flex;
-  }
-  
-  .part {
-    flex: 1;
-    background-color: #fff;
-  }
+/* Users Styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.card {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  label {
-    margin-right: 10px;
-  }
-  
-  input[type="text"], input[type="password"] {
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  input[type="submit"] {
-    padding: 8px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.card-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-  .users-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .visitor-card {
-    background-color: #f1f1f1;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 300px;
-    text-align: center;
-  }
+.card-ip {
+  font-size: 18px;
+}
+
+/* Login Styles */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="submit"] {
+  padding: 8px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -6,13 +6,17 @@
 </head>
 <body>
   <%- include('_header') %>
-  <div class="users-container">
-    <% visitors.forEach(function(visitor) { %>
-      <div class="visitor-card">
-        <h2>Visitor's IP</h2>
-        <p><%= visitor %></p>
+  <div class="card-container">
+    <% for (let [ip, name] of visitors) { %>
+      <div class="card">
+        <div class="card-name">
+          <%= name %>
+        </div>
+        <div class="card-ip">
+          <%= ip %>
+        </div>
       </div>
-    <% }); %>
+    <% } %>
   </div>
   <%- include('_footer') %>
 </body>
