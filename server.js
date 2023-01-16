@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('index.ejs', { menu: [] });
+  res.render('index.ejs', { menu: [], visitors: guestNames });
 });
 
 app.get('/tutd', (req, res) => {
@@ -27,20 +27,15 @@ app.get('/tutd', (req, res) => {
     { name: 'wigglethumb', url: '/wigglethumb' },
     { name: 'downthumb', url: '/downthumb' },
     { name: 'removethumb', url: '/removethumb' }
-  ]});
+  ], visitors: guestNames });
 });
 
 app.get('/users', (req, res) => {
-  let ipToName = new Map();
-  guestNames.forEach((value, key) => {
-    ipToName.set(key, value)
-  });
-  res.render('users.ejs', { visitors: ipToName });
+  res.render('users.ejs', { visitors: guestNames });
 });
 
-
 app.get('/login', (req, res) => {
-  res.render('login.ejs');
+  res.render('login.ejs', { visitors: guestNames });
 });
 
 app.listen(8000, () => {
