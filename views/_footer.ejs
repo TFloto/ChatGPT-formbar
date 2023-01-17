@@ -1,5 +1,10 @@
 <footer>
-    <% for(let [ip, name] of visitors) { %>
-        <div class="visitor-bar" data-ip="<%= ip %>"></div>
+<<<<<<< HEAD
+    <% for (let [ip, guest] of visitors) { %>
+        <div class="visitor-bar" data-ip="<%= ip %>" <% if(guest.thumb === "up") { %>style="background-color: green;"<% } %>></div>
+=======
+    <% for(let i = 0; i < visitors.size; i++) { %>
+        <div class="visitor-bar"></div>
+>>>>>>> parent of 93c99a8 (virtualbar slightly works now)
     <% } %>
 </footer>

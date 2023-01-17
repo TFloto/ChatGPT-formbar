@@ -10,10 +10,13 @@ let visitors = new Set();
 
 app.use((req, res, next) => {
   let ip = req.connection.remoteAddress;
-  if(!guestNames.has(ip)){
-    guestNames.set(ip, {name: `Guest ${Math.floor(Math.random() * 900000) + 100000}`, thumb: ""});
+<<<<<<< HEAD
+  if(!req.guestNames){
+    req.guestNames = new Map();
   }
-  visitors.add(ip);
+  if(!req.guestNames.has(ip)){
+    req.guestNames.set(ip, `Guest ${Math.floor(Math.random() * 900000) + 100000}`);
+  }
   next();
 });
 
@@ -32,16 +35,14 @@ app.get('/tutd/upthumb', (req, res) => {
   let ip = req.connection.remoteAddress;
   // update the guestNames map with the thumb status
   guestNames.set(ip, {name: guestNames.get(ip).name, thumb: "up"});
-  res.render('tutd.ejs', { buttons: [
-  { name: 'upthumb', url: '/upthumb' },
-  { name: 'removethumb', url: '/removethumb' }
-  ], visitors: guestNames });
+  res.redirect('/tutd');
 });
+
 
 
 app.get('/users', (req, res) => {
-res.render('users.ejs', { visitors: guestNames });
-});
+  res.render('users.ejs', { visitors: guestNames, guestNames: guestNames });
+  });
 
 app.get('/login', (req, res) => {
   res.render('login.ejs', { visitors: guestNames });
