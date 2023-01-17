@@ -18,6 +18,14 @@
       margin: 10px;
       border-radius: 5px;
     }
+    /* Change the color of the bar for the user that clicked thumbup */
+    <% for (let [ip, name] of visitors) { %>
+    <% if(name.thumb === "up") { %>
+      .visitor-bar[data-ip="<%= ip %>"] {
+        background-color: green;
+      }
+    <% } %>
+    <% } %>
   </style>
 </head>
 <body>

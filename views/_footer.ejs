@@ -1,5 +1,5 @@
 <footer>
-    <% for(let i = 0; i < visitors.size; i++) { %>
-        <div class="visitor-bar"></div>
+    <% for(let [ip, name] of visitors) { %>
+        <div class="visitor-bar" data-ip="<%= ip %>"></div>
     <% } %>
 </footer>

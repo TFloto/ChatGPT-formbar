@@ -52,6 +52,11 @@ footer {
     height: 10px;
     margin: 0 5px;
 }
+
+.visitor-bar.up {
+  background-color: green;
+}
+
 /* Home Styles */
 /* ... */
 
